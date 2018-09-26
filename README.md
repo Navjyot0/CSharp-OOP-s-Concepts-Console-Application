@@ -1,6 +1,4 @@
-# CSharp-OOP-s-Concepts-Console-Application
+# CSharp-OOPs-Concepts
 
-C# object oriented concepts and much more
-
-#console application
+C# object oriented concepts
 With Realtime Examples
