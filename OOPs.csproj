@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8BEC604-C146-4902-BA2D-6CD17B5DC4D8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OOPs</RootNamespace>
+    <AssemblyName>OOPs</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>OOPs.ExtentionMethods</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractClass.cs" />
+    <Compile Include="AccessSpecifier.cs" />
+    <Compile Include="AnonymousMethod.cs" />
+    <Compile Include="Collection.cs" />
+    <Compile Include="Constructor.cs" />
+    <Compile Include="DataTypes.cs" />
+    <Compile Include="Delegate.cs" />
+    <Compile Include="Enumeration.cs" />
+    <Compile Include="ExceptionEx.cs" />
+    <Compile Include="ExtentionMethods.cs" />
+    <Compile Include="Generics.cs" />
+    <Compile Include="IComparable_IComparer_DelegateCompare.cs" />
+    <Compile Include="IEnumerable.cs" />
+    <Compile Include="indexes.cs" />
+    <Compile Include="Industries.cs" />
+    <Compile Include="Inheritance.cs" />
+    <Compile Include="Interface.cs" />
+    <Compile Include="InterfaceClass.cs" />
+    <Compile Include="LambdaExp.cs" />
+    <Compile Include="LINQ.cs" />
+    <Compile Include="ManageMultiThreading.cs" />
+    <Compile Include="MultiThreading.cs" />
+    <Compile Include="Params.cs" />
+    <Compile Include="PartialClass.cs" />
+    <Compile Include="PerallelClass.cs" />
+    <Compile Include="PLINQ.cs" />
+    <Compile Include="Polymorphism.cs" />
+    <Compile Include="Properties.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringVSStringBuilder.cs" />
+    <Compile Include="Structure.cs" />
+    <Compile Include="Tasks.cs" />
+    <Compile Include="ThreadForExam.cs" />
+    <Compile Include="ThreadLocking.cs" />
+    <Compile Include="ThreadPerformance.cs" />
+    <Compile Include="ThreadPriorities.cs" />
+    <Compile Include="UsingConcurrentCollections.cs" />
+    <Compile Include="Variable_Instance_Reference.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
