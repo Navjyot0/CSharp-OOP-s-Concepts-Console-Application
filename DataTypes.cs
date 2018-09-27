@@ -57,6 +57,9 @@ namespace OOPs
          * 
          * Type-safety in C#?
          * 
+         * How to manage overflow of integer?
+         * Not sure of ans but May be(try catch and exception of overflow)
+         * Can use if-else with size condition 
          */
 
         static void Main()
