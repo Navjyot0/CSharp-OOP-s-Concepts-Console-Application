@@ -61,6 +61,66 @@ delete from student --Delete all recoreds
 truncate table department --remove all records (its faster than delete because it don't depend upon other dependencies)
 drop table department --delete all table and its structure too..
 
+--Keys 
+--Types of Keys
+--1. Candidate Key
+--2. Primary key (Imp)
+--3. Foreign key (Imp)
+--4. Alternate key(primary key on multiple column)
+--5. Composite Key (Imp)
+
+--Primary key (Imp)
+Create table Employee
+(
+	EmpId int primary key Identity(1, 1),
+	FirstName nvarchar(100),
+	LastName nvarchar(100),
+	Age tinyint
+)
+--Composite Key (Imp)
+Create table Employee
+(
+	EmpId int Identity(1, 1),
+	FirstName nvarchar(100),
+	LastName nvarchar(100),
+	Age tinyint,
+	constaint PK_Employee Primary key (EmpId, FirstName)
+)
+--Forign key (Imp)
+create table Department
+(
+	DeptId int primary key identity(1, 1),
+	Department nvarchar(100)
+)
+create table Employee 
+(
+	EmpId int primary key Identity(1, 1),
+	FirstName nvarchar(100),
+	LastName nvarchar(100),
+	Age tinyint
+	DeptId int forign key references Department(DeptId) 
+)
+
+--Constraints
+--constraints are used to specify rules for the data in a table
+--NOT NULL - Ensures that a column cannot have a NULL value
+--UNIQUE - Ensures that all values in a column are different
+--PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+--FOREIGN KEY - Uniquely identifies a row/record in another table
+--CHECK - Ensures that all values in a column satisfies a specific condition
+--DEFAULT - Sets a default value for a column when no value is specified
+--INDEX - Used to create and retrieve data from the database very quickly
+
+-- Join 
+-- Types 
+--1. Inner Join
+--2. Outer Join 
+--	1. Left Join 
+--	2. right join
+--	3. full outer join
+--3. self join
+--4. cross join
+
 --Inner Join 
 select * from student inner join Department on student.DeptId=Department.DeptId
 
