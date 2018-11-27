@@ -295,9 +295,127 @@ select stu.StudentId as 'Id', stu.Name, stu.Age, stu.Fees, dept.Department from 
 
 Drop view StudentDept
 
---PL/SQL
+		--  PL/SQL --
 
-if 1=2
-	select 'Name'
+/*
+What is PL/SQL(Procedural Language) or T/SQL (Transact)?
+- PL/SQL is a block structured language.
+- PL/SQL stands for "Procedural Language extension of SQL"
+- PL/SQL is not case sensitive
+- SQL does not support conditional and looping statements like IF-Else and While loop. 
+- But we can implement these conditional and looping statements in T/SQL.
+- SQL language will not provide reusability facilities where as T/SQL language will provide reusability facilities by defining objects such as Procedures and Functions.
+- T/SQL Program blocks can be divided into two types. Those are
+	1. Anonymous Blocks
+	2. Sub-Program Blocks
+
+
+Declare variables in T/SQL Programm?
+Syntax : Declare @<var> [as] <data type> [size]... 
+Ex :- 
+*/
+
+Declare @Eid int;
+declare @EmployeeName nvarchar(200);
+/*
+Assigning value to variables 
+Syntax : set @var = <value>
+Ex:-
+*/
+Set @Eid=101;
+set @EmployeeName='Name of Emplyee'
+--Print
+select @Eid as 'EID', @EmployeeName as 'EmployeeName'
+--OR
+print @Eid 
+print @EmployeeName
+
+/*Conditional Statements*/
+-- 1. IF-ELSE
+declare @a int, @b int;
+set @a=100;
+set @b=100;
+if(@a>@b)
+print 'a > b';
+else if(@a<@b)
+print 'a < b';
 else
-	select 'Id' 
+print 'a=b'
+
+-- 2. While 
+Declare @i int;
+set @i=1;
+while @i<=10
+begin
+print @i;
+set @i=@i+1;
+end
+
+/*
+##Stored Procedures/Procedure: 
+- A stored procedure is a database object which contains precompiled queries. 
+- Stored Procedures are a block of code designed to perform a task whenever we called.
+
+Syntax: 
+	Create Procedures <Procedures Name>
+	(Passing parameters)
+	As
+	Begin
+		<Statements>
+	End
+
+To Call SP:-
+Syntax: Exec <Procedure name>
+
+To Drop SP:-
+Drop Procedure <Procedure Name>
+
+## Stored Functions/Functions: 
+-- Function is a block of code similar to a stored procedure which is also used to perform an action and returns result as a value. 
+-- Function can be divided into two types, these are
+
+1. Scalar-Valued Fuction 
+-- In this case we can return a attribute datatype as an output from the function.
+Syntax: 
+Create Function <Function Name> 
+	(@parameter <Data Type> [size])
+	Returns <return attribute data type>
+As
+Begin
+	<Function Body>
+	Return <return attribute name>
+End
+
+Call Syntax : Select dbo.<Function Name> (value)
+
+2. Table-Valued Fuction
+-- In this case we can return a table as an output from the function.
+
+Syntax : 
+Create Function <Function Name> 
+	(@parameter <Data Type> [size])
+	Returns <Table>
+As
+	Return <return select statement>
+
+
+Drop Function: 
+Drop Function <Function Name>
+Difference between Function And Procedure:
+- A function must return a value where as procedure never returns a value.
+- A procedure can have parameters of both input (with parameters) and output (without parameters) where as a function can have only input (with parameters) parameters only.
+- In procedure we can perform select, insert, update and delete operation where as function can used only to perform select. Cannot be used to perform insert, update and delete operations.
+- A procedure provides the option for to perform transaction management where as these operations are not permitted in a function.
+- We call a procedure using execute command where as function are called by using select command only.
+*/
+
+
+/*Triggers*/
+
+/*Magic Table*/
+
+/*CURSOR*/
+
+/*DATA CONTROL LANGUAGE*/
+
+/*Normalization*/
