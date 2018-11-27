@@ -174,7 +174,7 @@ update student set classId=1
 
 select * from student
 
--- Aggrigate function 
+-- Aggregate function 
 -- An aggregate function performs a calculation on a set of values, and returns a single value.
 -- Except for COUNT, aggregate functions ignore null values.
 -- Aggregate functions are often used with the GROUP BY clause of the SELECT statement.
@@ -201,6 +201,99 @@ select distinct(Fees) as 'Total Fees' from Student
 -- Group By 
 -- select exp1, exp2, exp3, .. , exp_n aggrigate_function(expresion) from tables [where condition] group by exp1, exp2, exp3, .. , exp_n
 select DeptId, Name, COUNT(*) as 'No of student' from Student group by DeptId, Name
+
+-- Aggregate function 
+-- An aggregate function performs a calculation on a set of values, and returns a single value.
+-- Except for COUNT, aggregate functions ignore null values.
+-- Aggregate functions are often used with the GROUP BY clause of the SELECT statement.
+-- All aggregate functions are deterministic.
+
+select Min(Fees) as 'Lowest Salary' from Student
+
+select Min(Name) as 'Lowest Name' from Student
+
+select Max(Fees) as 'Max Fees' from Student
+
+select Max(Name) as 'Max Name' from Student
+
+select Sum(Fees) as 'Total Fees' from Student
+
+select Sum(Name) from Student -- Error : "Operator data type nvarchar is invalid for sum operator."
+
+select avg(fees) as 'Average fees' from Student
+
+select Count(*) as 'Total Student' from Student where DeptId=3
+
+select distinct(Fees) as 'Total Fees' from Student
+
+-- Group By 
+-- select exp1, exp2, exp3, .. , exp_n aggrigate_function(expresion) from tables [where condition] group by exp1, exp2, exp3, .. , exp_n
+select DeptId, Name, COUNT(*) as 'No of student' from Student group by DeptId, Name
+
+
+-- Union Operator (Common(single time), not common)
+-- SELECT expression1, expression2, ... expression_n FROM tables [WHERE conditions] UNION SELECT expression1, expression2, ... expression_n FROM tables [WHERE conditions];
+select DeptId from Student
+union
+select DeptId from Department
+
+-- Intersect Operator (Common records)
+-- SELECT expression1, expression2, ... expression_n FROM tables [WHERE conditions] INTERSECT SELECT expression1, expression2, ... expression_n FROM tables [WHERE conditions];
+select DeptId from Student
+intersect 
+select DeptId from Department
+
+-- IN() 
+-- expression IN (value1, value2, .... value_n);   
+select * from Student where Name in ('Navjyot Gurhale', 'Nitin Patil')
+
+-- NOT()
+-- NOT condition
+select * from Student where name not in ('Navjyot Gurhale', 'Nitin Patil')
+select * from Student where name is not null
+select * from Student where Name not like '%Navjyot%'
+select * from Student where StudentId not between 2 and 3
+
+-- Between Operator
+-- expression BETWEEN value1 AND value2;  
+select * from Student where StudentId between 2 and 3
+
+-- IS NULL
+-- Expression IS NULL
+select * from Student where Name is null
+
+-- IS Not Null 
+-- Expression IS NOT NULL
+Select * from Student where Fees is not null
+
+-- Like 
+select * from Student where Name like '%N%'
+
+-- Key Updates
+-- Check (Enable) 
+-- Ex : Alter Table <table_Name> check constraint <key_name>
+-- NoCheck (Disable)
+-- Ex : Alter Table <table_Name> uncheck constraint <key_name>
+-- Drop (Drop)
+-- Ex : Alter Table <table_Name> drop constraint <key_name>
+
+-- Views 
+-- A view is a virtual table created according to the result set of an SQL statement
+-- A view contains rows and columns, just like a real table. 
+-- The columns in the view are the columns from one or more real tables in the database. 
+-- SQL functions, WHERE, and JOIN statements can also be added to the view.
+-- Syntax : create view [View_Name] as select col_1, col_2, .. col_n from [Table_Name] where condition
+create view StudentDept 
+as 
+select stu.Name, stu.Age, stu.Fees, dept.Department from Student stu, Department dept where stu.deptId=dept.deptid
+
+select * from StudentDept
+
+alter view StudentDept
+as
+select stu.StudentId as 'Id', stu.Name, stu.Age, stu.Fees, dept.Department from Student stu, Department dept where stu.deptId=dept.deptid
+
+Drop view StudentDept
 
 --PL/SQL
 
