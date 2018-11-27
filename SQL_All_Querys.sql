@@ -174,6 +174,34 @@ update student set classId=1
 
 select * from student
 
+-- Aggrigate function 
+-- An aggregate function performs a calculation on a set of values, and returns a single value.
+-- Except for COUNT, aggregate functions ignore null values.
+-- Aggregate functions are often used with the GROUP BY clause of the SELECT statement.
+-- All aggregate functions are deterministic.
+
+select Min(Fees) as 'Lowest Salary' from Student
+
+select Min(Name) as 'Lowest Name' from Student
+
+select Max(Fees) as 'Max Fees' from Student
+
+select Max(Name) as 'Max Name' from Student
+
+select Sum(Fees) as 'Total Fees' from Student
+
+select Sum(Name) from Student -- Error : "Operator data type nvarchar is invalid for sum operator."
+
+select avg(fees) as 'Average fees' from Student
+
+select Count(*) as 'Total Student' from Student where DeptId=3
+
+select distinct(Fees) as 'Total Fees' from Student
+
+-- Group By 
+-- select exp1, exp2, exp3, .. , exp_n aggrigate_function(expresion) from tables [where condition] group by exp1, exp2, exp3, .. , exp_n
+select DeptId, Name, COUNT(*) as 'No of student' from Student group by DeptId, Name
+
 --PL/SQL
 
 if 1=2
