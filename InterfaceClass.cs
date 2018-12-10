@@ -20,6 +20,14 @@ namespace OOPs
         
         // 04
         void Display(string Name);
+        
+        //05
+        //Interface also can have properties
+        string FirstName { get; set; }
+        
+        //06
+        //Interface can't have variables
+        //string LastName; 
 
     }
 
