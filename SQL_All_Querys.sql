@@ -66,8 +66,8 @@ drop table department --delete all table and its structure too..
 --1. Candidate Key
 --2. Primary key (Imp)
 --3. Foreign key (Imp)
---4. Alternate key(primary key on multiple column)
---5. Composite Key (Imp)
+--4. Alternate key(all keys other than primary key)
+--5. Composite Key (Imp) (primary key on multiple column)
 
 --Primary key (Imp)
 Create table Employee
