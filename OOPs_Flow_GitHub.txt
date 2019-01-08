@@ -1,0 +1,53 @@
+﻿Flow Of Study
+
+C# :- 
+
+1. Introduction to .Net
+2. Working With Visual-Studio
+3. DataTypes (DataTypes.cs)
+4. Constructor, Types of Constructor, Why Constructors are needed, Static/Non-Static Constructor (Constructor.cs)
+5. Diffrence between variable instance and reference (Variable_Instance_Reference.cs)
+6. Access Specifier (AccessSpecifier.cs)
+7. Different Kinds of variables
+8. Inheritance (Inheritance.cs)
+9. Method overloading (Polymorphism.cs)
+10. Polymorphism (Method overriding, Method hiding, Operator Overloading) (Polymorphism.cs)
+11. Abstract Class and Method (AbstractClass.cs)
+12. Structure (Structure.cs)
+13. Enum (Enumeration.cs)
+14. Properties (Properties.cs)
+15. Indexers (indexes.cs)
+16. Partial Class (PartialClass.cs)
+17. Interface (Interface.cs, InterfaceClass.cs)
+18. Delegates (Delegate.cs)
+19. Multicast Delegate (Delegate.cs)
+20. Anonymous Methods (AnonymousMethod.cs)
+21. Lambda Expressions (LambdaExp.cs)
+22. Func, Action, Predicate
+23. Extension Method (ExtentionMethods.cs)
+24. String and String Builder (StringVSStringBuilder.cs)
+25. Exception & Exception Handlling (ExceptionEx.cs)
+26. Multithreading (ManageMultiThreading.cs, MultiThreading.cs, PLINQ.cs, PerallelClass.cs, ThreadForExam.cs, ThreadLocking.cs, ThreadPerformance.cs, ThreadPriorities.cs, UsingConcurrentCollections.cs)
+27. Tasks (Tasks.cs)
+28. Collection (Collection.cs, Generics.cs)
+29. LINQ to SQL (LINQ.cs)
+30. IEnumerable, IEnumerator (_IEnumrable.cs, IEnumerable.cs)
+31. IComparable, IComparer (IComparable_IComparer_DelegateCompare.cs)
+
+
+Miscellaneous
+1. Boxing/UnBoxing
+2. static, void
+3. Array
+4. Params (Params.cs)
+5. Encapsulation
+6. Overloading, Hiding, Shadowing
+7. Reflection
+8. Attributes
+9. Events
+10. Unsafe Codes
+
+Other Files
+1. Industries.cs
+2. 
+3. SQL_All_Querys.sql
