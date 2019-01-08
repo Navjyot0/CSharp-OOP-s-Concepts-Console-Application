@@ -50,6 +50,9 @@ Miscellaneous
 12. Constants and Readonly
 13. Custom Control and User Control
 14. What is use of private virtual method be overridden
+15. singleton design pattern 
+16. Directcast and ctype
+17. Managed or UnManaged code
 
 Other Files
 1. Industries.cs
