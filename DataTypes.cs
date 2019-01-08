@@ -9,8 +9,8 @@ namespace OOPs
     {
         /* ===========Data-Types===========
          * Types of Datatype:
-         * 1. Value Type (Predefined:int/double/float/bool)(UserDefined:Struct/Enum) (this type directly contains their data where variable of ref type store there ref of data)
-         * 2. Reference Type (Predefined:strings/objects)(UserDefined:Class/Interface)
+         * 1. Value Type (Stack Memory) (Predefined:int/double/float/bool)(UserDefined:Struct/Enum) (this type directly contains their data where variable of ref type store there ref of data)
+         * 2. Reference Type (Heap Memory) (Predefined:strings/objects)(UserDefined:Class/Interface)
          * 3. Pointer Type
          * 
          * Boxing/Unboxing:
@@ -30,7 +30,7 @@ namespace OOPs
          * 
          * 
          * Difference between Boxing/Unboxing and Type-Casting?
-         * Boxing/Unboxing is Implicate while Type-casting is External
+         * Boxing/Unboxing is Implicit while Type-casting is External
          * Boxing/Unboxing need value type for changing.
          *  ____________________________________________________________________________________________________________________________________
             |Alias	 |.NET Type	|Type	                               | Size (bits)|Range (values)                                             |
@@ -60,6 +60,8 @@ namespace OOPs
          * How to manage overflow of integer?
          * Not sure of ans but May be(try catch and exception of overflow)
          * Can use if-else with size condition 
+         *
+         *
          */
 
         static void Main()
