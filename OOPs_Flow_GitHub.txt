@@ -1,10 +1,10 @@
-﻿Flow Of Study
+Flow Of Study
 
 C# :- 
 
 1. Introduction to .Net
 2. Working With Visual-Studio
-3. DataTypes (DataTypes.cs)
+3. DataTypes (value types and reference types) (DataTypes.cs)
 4. Constructor, Types of Constructor, Why Constructors are needed, Static/Non-Static Constructor (Constructor.cs)
 5. Diffrence between variable instance and reference (Variable_Instance_Reference.cs)
 6. Access Specifier (AccessSpecifier.cs)
@@ -46,6 +46,10 @@ Miscellaneous
 8. Attributes
 9. Events
 10. Unsafe Codes
+11. Serialization
+12. Constants and Readonly
+13. Custom Control and User Control
+14. What is use of private virtual method be overridden
 
 Other Files
 1. Industries.cs
