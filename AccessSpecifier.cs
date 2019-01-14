@@ -7,7 +7,11 @@ namespace OOPs
 {
     class AccessSpecifier
     {
-        /*===========Access modifiers or specifiers============
+        /* Links :  
+         * https://www.c-sharpcorner.com/UploadFile/84c85b/oop-series-sharp2-understanding-access-specifier-with-C-Sharp/
+         * https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers
+         * 
+         * ===========Access modifiers or specifiers============
          * Access modifiers and/or specifiers are keywords (private, public, internal, protected and protected internal) to specify the accessibility of a type and its members.
          * C# has 5 access specifier or access modifier keywords; those are 
          * 1. Private
