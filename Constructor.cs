@@ -8,17 +8,18 @@ namespace OOPs
     class Constructor
     {
 
-        /*https://www.c-sharpcorner.com/UploadFile/0c1bb2/constructors-and-its-types-in-C-Sharp/
-         *https://www.geeksforgeeks.org/c-sharp-constructors/
+        /* https://www.c-sharpcorner.com/UploadFile/0c1bb2/constructors-and-its-types-in-C-Sharp/
+         * https://www.geeksforgeeks.org/c-sharp-constructors/
          * =========Constructor==========
          * It is special type of method which has same name as class and it invokes at creation of object instance creation of class.
          * The Main use of constructor is to initialize the members of class
          * It has same name as Class/Structure name.
          * When you have not created a constructor in the class, the compiler will automatically create a default constructor in the class. 
-         * The default constructor initializes all numeric fields in the class to zero and all string and object fields to null. 
+         * The default constructor initializes all numeric fields in the class to zero, all string and object fields to null. 
+         * Explicitly defined construcors are also default constructor unless it has no parameters
          * 
          * ========= Some Key Points ====
-         * Constructors must be accsessible or we nighter create Instance nor inherit with other class.
+         * Constructors must be accsessible or we neither create Instance nor inherit with other class.
          * In default constructors all Ref types(string/object, etc) are initialized with null and all value types(int, double, etc) are initialized with 0, boolean is initialised with false.
          * If we define constructor (Parametrised/Parameterless) in class default constructor is no more exists in class. ( above statement is still true unless we are not changing them)
          * Everytime when we create object instance constructs fires/executes.
@@ -29,7 +30,7 @@ namespace OOPs
          * Class can have any no of Constructor
          * Constructor doesn't have any return type not even void.
          * Within class we can have only one static constructor.
-         * static constructor can't have parameter(it should parameterless)
+         * static constructor can't have parameter(it should parameterless) [as static constructor is the first block to execute in the class we can not pass the value to this so parametrised statuc constructor is not possible]
          * 
          * ========= Types of Constructor =======
          * 1. Default/Parameterless Constructor
@@ -43,15 +44,14 @@ namespace OOPs
          * 
          * ======== 1. Default Constructor ========
          * A constructor without parameter is Default constructor.
-         * 
-         * Drowback of this is all values are initialised to same value
+         * Explicit constructors can be default constuctors as long as it has no parameters
+         * Drowback of this is all values are initialised to same value (that's why we need parametrised constructor)
          * all numeric fields of class to zero
          * and all string and object to null
          * and bool to false
          * 
          * ======= 2. Parametrized Constructor ======
-         * Constructor with at least one constructor is parametrized constructor
-         * 
+         * Constructor with at least one parameter is parametrized constructor
          * Advantage of this you can initialise class fields at object creationpassing value;
          * 
          * ======= 3. Copy Constructor =======
